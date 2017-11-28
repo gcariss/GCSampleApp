@@ -1,0 +1,56 @@
+﻿@model SampleApp.Models.IndexModel
+@{
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <style type="text/css">
+        myform {
+            background-color: blue;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        alert("HI");
+
+    </script>
+
+</head>
+<body>
+    <div> 
+        Hello World
+    </div>
+
+    <div >
+        @ViewBag.Result
+    </div>
+
+        @using (Html.BeginForm("SelectCategory", "Home", FormMethod.Post, new { @class = "form" }))
+    {
+        <fieldset>
+            Vehicle Make
+            @Html.DropDownList("VehMake")
+            <p>
+                <input type="submit" value="Submit" />
+            </p>
+        </fieldset>
+
+    }
+
+   
+ 
+
+    
+
+      
+
+
+</body>
+</html>
