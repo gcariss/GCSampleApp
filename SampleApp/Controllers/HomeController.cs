@@ -24,6 +24,8 @@ namespace SampleApp.Controllers
                 ViewBag.Result = "that worked";
             }
 
+            //testing
+
             // build make drop down list            
             List<SelectListItem> items = new List<SelectListItem>();
             items.Add(new SelectListItem { Text = "Ford", Value = "0" });
