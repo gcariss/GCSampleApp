@@ -36,7 +36,7 @@
     {
         <fieldset>
             Vehicle Make
-            @Html.DropDownList("VehMake")
+            @Html.DropDownListFor(m=> m.VehMake, Model.Makes)
             <p>
                 <input type="submit" value="Submit" />
             </p>

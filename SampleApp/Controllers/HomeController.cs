@@ -27,16 +27,15 @@ namespace SampleApp.Controllers
             //testing
 
             // build make drop down list            
-            List<SelectListItem> items = new List<SelectListItem>();
-            items.Add(new SelectListItem { Text = "Ford", Value = "0" });
-            items.Add(new SelectListItem { Text = "Chevy", Value = "1" });
-            items.Add(new SelectListItem { Text = "Audi", Value = "2" });
-            items.Add(new SelectListItem { Text = "Freightliner", Value = "3" });
+            IndexModel Name = new IndexModel();
+            Name.Makes.Add(new SelectListItem { Text = "Ford", Value = "0" });
+            Name.Makes.Add(new SelectListItem { Text = "Chevy", Value = "1" });
+            Name.Makes.Add(new SelectListItem { Text = "Audi", Value = "2" });
+            Name.Makes.Add(new SelectListItem { Text = "Freightliner", Value = "3" });
 
-            // add dropdown list items to ViewBag to access from the cshtml page.
-            ViewBag.VehMake = items;
+ 
 
-            return View();
+            return View(Name);
         }
         public ActionResult Submit(String FirstName)
         {
